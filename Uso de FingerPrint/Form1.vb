@@ -217,7 +217,7 @@ Public Class Form1
             cmd.CommandText = "INSERT INTO Usuarios(Nombre,huella) VALUES(?,?)"
             'cmd.CommandText = "INSERT INTO Usuarios(Nombre,huella) VALUES('" + txtNombre.Text.ToString() + "','" + fm + "',?)"
             cmd.Parameters.AddWithValue("Nombre", txtNombre.Text.ToString())
-
+            ' PRUEBA PARA VER SI SE GUARDÓ EN GIT HUB
             Using fm As New MemoryStream(template.Bytes)
                 cmd.Parameters.AddWithValue("huella", fm.ToArray()) ' cargamos la huella
             End Using
